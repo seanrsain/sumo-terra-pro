@@ -2,6 +2,7 @@ package sumologic
 
 import (
 	"fmt"
+
 	"github.com/go-errors/errors"
 
 	"github.com/hashicorp/terraform/helper/mutexkv"
@@ -34,6 +35,7 @@ func Provider() terraform.ResourceProvider {
 
 		ResourcesMap: map[string]*schema.Resource{
 			"sumologic_user": resourceSumologicUser(),
+			"sumologic_role": resourceSumologicRole(),
 		},
 
 		ConfigureFunc: providerConfigure,
