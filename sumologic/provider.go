@@ -34,8 +34,17 @@ func Provider() terraform.ResourceProvider {
 		},
 
 		ResourcesMap: map[string]*schema.Resource{
-			"sumologic_user": resourceSumologicUser(),
-			"sumologic_role": resourceSumologicRole(),
+			// "sumologic_collector":     resourceSumologicCollector(),
+			"sumologic_user":          resourceSumologicUser(),
+			"sumologic_role":          resourceSumologicRole(),
+			"sumologic_ingest_budget": resourceSumologicIngestBudget(),
+			"sumologic_folder":        resourceSumologicFolder(),
+			"sumologic_content":       resourceSumologicContent(),
+		},
+
+		DataSourcesMap: map[string]*schema.Resource{
+			// "sumologic_collector": dataSourceSumologicCollector(),
+			"sumologic_personal_folder": dataSourceSumologicPersonalFolder(),
 		},
 
 		ConfigureFunc: providerConfigure,

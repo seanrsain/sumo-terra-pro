@@ -59,7 +59,7 @@ type Role struct {
 	// Description of the role.
 	Description string `json:"description,omitempty"`
 	// A search filter to restrict access to specific logs. The filter is silently added to the beginning of each query a user runs. For example, using '!_sourceCategory=billing' as a filter predicate will prevent users assigned to the role from viewing logs from the source category named 'billing'.
-	FilterPredicate string `json:"filterPredicate,omitempty"`
+	FilterPredicate string `json:"filterPredicate"`
 	// List of user identifiers to assign the role to.
 	Users []string `json:"users,omitempty"`
 	// List of [capabilities](https://help.sumologic.com/Manage/Users-and-Roles/Manage-Roles/Role-Capabilities) associated with this role. Valid values are   ### Connections   - manageConnections   ### Collectors   - manageCollectors   - viewCollectors   ### Dashboards   - shareDashboardWhitelist   - shareDashboardWorld   ### Data Management   - manageContent   - manageDataVolumeFeed   - manageFieldExtractionRules   - manageIndexes   - manageS3DataForwarding   ### Metrics   - manageMonitors   - metricsExtraction   ### Security   - ipWhitelisting   - manageAccessKeys   - manageAuditDataFeed   - managePasswordPolicy   - manageSaml   - manageSupportAccountAccess   - manageUsersAndRoles   - shareDashboardOutsideOrg

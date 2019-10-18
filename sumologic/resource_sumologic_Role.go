@@ -36,6 +36,7 @@ func resourceSumologicRole() *schema.Resource {
 				Elem: &schema.Schema{
 					Type: schema.TypeString,
 				},
+				// ADD READ ONLY HERE
 			},
 			"capabilities": {
 				Type:     schema.TypeList,
@@ -67,7 +68,7 @@ func resourceSumologicRoleRead(d *schema.ResourceData, meta interface{}) error {
 
 	d.Set("name", role.Name)
 	d.Set("description", role.Description)
-	d.Set("filterPredicate", role.FilterPredicate)
+	d.Set("filter_predicate", role.FilterPredicate)
 	d.Set("users", role.Users)
 	d.Set("capabilities", role.Capabilities)
 
