@@ -19,9 +19,6 @@ install:
 script:
 - make testacc
 
-branches:
-  only:
-  - master
 matrix:
   fast_finish: true
   allow_failures:
