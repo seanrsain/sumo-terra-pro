@@ -20,6 +20,3 @@ jobs:
     steps:
     # Checks-out tfproviderlint repository and runs tfproviderlint ./...
     - uses: bflad/tfproviderlint-github-action@master
-      with:
-        entrypoint: /usr/bin/tfproviderlint
-        args: ./...
