@@ -18,5 +18,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out tfproviderlint repository and runs tfproviderlint ./...
-    - uses: seanrsain/tfproviderlint-github-action@master
+    - uses: actions/checkout@v2.0.0    
+    - uses: bflad/tfproviderlint-github-action@master
+      with:
+        ars: ./...
